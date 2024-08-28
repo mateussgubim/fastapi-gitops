@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "fastzero.fullname" . }}-test-connection"
+  labels:
+    {{- include "fastzero.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['{{ include "fastzero.fullname" . }}:{{ .Values.service.port }}']
+  restartPolicy: Never
