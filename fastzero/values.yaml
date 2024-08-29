@@ -9,23 +9,13 @@ image:
 service:
   type: ClusterIP
   port: 80
+  targetPort: 8080
 
 ingress:
   enabled: true
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-targets: /
+    nginx.ingress.kubernetes.io/rewrite-target: /
   hosts:
-    - host: fastzero.local
+    - host: fastzero.localhost
       paths:
         - path: /
-
-serviceAccount:
-  create: true
-  name: ""
-
-autoscaling:
-  enabled: true
-  minReplicas: 2
-  maxReplicas: 3
-  targetCPUUtilizationPercentage: 80
-  targetMemoryUtilizationPercentage: 75
