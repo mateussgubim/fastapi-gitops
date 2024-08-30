@@ -7,15 +7,25 @@ image:
   tag: latest
 
 service:
-  type: ClusterIP
-  port: 80
-  targetPort: 8080
+  type: LoadBalancer
+  port: 8000
+  targetPort: 8000
 
 ingress:
   enabled: true
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
   hosts:
-    - host: fastzero.localhost
+    - host: localhost
       paths:
         - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: fastzero-service
+              port:
+                number: 8000
+  tls:
+  enabled: true
+  secretName: fastzero-tls-secret
