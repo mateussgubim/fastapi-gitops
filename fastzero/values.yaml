@@ -12,5 +12,5 @@ service:
   targetPort: 8000
 
 argoCd:
-  repoURL: 'https://github.com/mateussgubim/fastapi-gitops'
-  path: fastzero/templates/
+  repoURL: https://github.com/mateussgubim/fastapi-gitops
+  path: fastzero
