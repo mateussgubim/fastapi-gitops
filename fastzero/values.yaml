@@ -10,7 +10,3 @@ service:
   type: ClusterIP
   port: 8000
   targetPort: 8000
-
-argoCd:
-  repoURL: https://github.com/mateussgubim/fastapi-gitops
-  path: fastzero
