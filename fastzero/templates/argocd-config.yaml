@@ -6,9 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: {{ .Values.argoCd.repoURL }}
+    repoURL: https://github.com/mateussgubim/fastapi-gitops
     targetRevision: HEAD
-    path: {{ .Values.argoCd.path }}
+    path: fastzero 
   destination:
     server: https://kubernetes.default.svc
     namespace: default
