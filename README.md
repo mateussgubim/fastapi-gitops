@@ -35,7 +35,7 @@ kubectl port-forward svc/argocd-server -n argocd 8080:443
 
 ### Access ArgoUI
 
-Access [localhost:8080/](localhost:8080)
+Access [http://localhost:8080/](http://localhost:8080)
 
   + User: admin
   + Password:
