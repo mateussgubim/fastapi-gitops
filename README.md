@@ -133,7 +133,7 @@ Click on `save & test`.
 ### Grafana Dashboard
 Go to `Dashboard` folder, select `+ Create dashboard` and click on `Import dashboard`.
 
-You can get the dashboard used dashboard [here](https://grafana.com/grafana/dashboards/15661-1-k8s-for-prometheus-dashboard-20211010/)
+You can get the used dashboard [here](https://grafana.com/grafana/dashboards/15661-1-k8s-for-prometheus-dashboard-20211010/)
 
 At dashboard page click on `Copy ID to clipboard`. Get back to grafana, paste it and click on `load`.
 
